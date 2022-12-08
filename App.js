@@ -1,20 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { NavigationContainer } from '@react-navigation/native'
+import { ThemeProvider } from 'react-native-elements'
+
+import HomeScreen from './pages/HomeScreen';
+
+const image = { uri: "https://wallpaperaccess.com/full/7489323.jpg" };
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <ThemeProvider>
+        <NavigationContainer>
+     
+          <HomeScreen />
+        </NavigationContainer>
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  image: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
   },
 });
