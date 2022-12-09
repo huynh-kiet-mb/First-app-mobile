@@ -4,10 +4,8 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native'
 import { ThemeProvider } from 'react-native-elements'
-
 import HomeScreen from './pages/HomeScreen';
 
-const image = { uri: "https://wallpaperaccess.com/full/7489323.jpg" };
 
 
 export default function App() {
@@ -15,7 +13,7 @@ export default function App() {
     <SafeAreaProvider>
       <ThemeProvider>
         <NavigationContainer>
-     
+ 
           <HomeScreen />
         </NavigationContainer>
       </ThemeProvider>

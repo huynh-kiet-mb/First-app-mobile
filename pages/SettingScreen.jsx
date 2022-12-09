@@ -1,8 +1,9 @@
 import * as React from "react";
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import HeaderBar from '../components/header/index';
 
 
-const image = { uri: "https://www.pixelstalk.net/wp-content/uploads/2016/08/1080-x-1920-HD-Wallpaper-Vertical.jpg" };
+const image = { uri: "https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Smartphone_1080x1920.jpg" };
 
 const SettingScreen = () => {
     return(
@@ -11,7 +12,9 @@ const SettingScreen = () => {
           source={image}
           resizeMode="stretch"
           style={styles.image}
-        ></ImageBackground>
+        >
+          <HeaderBar title="Cài đặt"/>
+        </ImageBackground>
       </View>
     );
 };
